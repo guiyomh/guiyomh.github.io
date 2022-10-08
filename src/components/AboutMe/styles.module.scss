@@ -1,0 +1,313 @@
+.about {
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(0deg, #fff 44.44%, #d4e7fe 44.44%, #d4e7fe 0%, #fff 0%, #fff 94.44%, #d4e7fe 94.44%, #d4e7fe 100%);
+    background-size: 10px 1220px;
+}
+
+.about-container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    flex-direction: row;
+    border-radius: 15px;
+    box-shadow: 0 0 9px 0 rgba(112, 112, 112, 0.16);
+    width: 85vw;
+    z-index: 2;
+    padding: 2em;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+
+    .first-column {
+        flex-grow: 2;
+
+        h1 {
+            color: #7d7d7d;
+            font-size: 22px;
+            font-weight: normal;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 35px;
+            font-weight: 600;
+            color: #222f5c;
+            margin: 5px 0 0 0;
+        }
+
+        h3 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #7d7d7d;
+            margin-bottom: 10px;
+        }
+
+        p {
+
+            &.years-old {
+                color: #b2b6c6;
+                font-size: 18px;
+                font-style: italic;
+            }
+
+            &.text {
+                margin-top: 1em;
+                font-size: 18px;
+                font-weight: 500;
+                color: #5e6788;
+                margin-right: 2em;
+                text-align: left;
+                min-height: 220px;
+                line-height: 1.5em;
+            }
+        }
+
+        .icon {
+            font-size: 40px;
+            color: #555f81;
+            margin-right: 1em;
+            transition: 0.3s;
+
+            &:hover {
+                color: #8087a1;
+            }
+        }
+    }
+
+    .second-column {
+        flex-grow: 1;
+
+        .profile-picture {
+            display: block;
+            width: 450px;
+            height: 450px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            -webkit-border-radius: 99em;
+            -moz-border-radius: 99em;
+            border-radius: 99em;
+            background-image: url('/img/about/guillaume.png');
+            border: 3px solid #d4e7fe;
+        }
+
+        .social-media {
+            text-align: center;
+            margin-top: 1em;
+
+            .icon {
+                font-size: 60px;
+                color: #414c73;
+                margin: 0 20px 0 20px;
+                transition: 0.3s;
+
+                &:hover {
+                    color: #8087a1;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+
+    .about-container {
+        .first-column p.text {
+            font-size: 16px;
+        }
+
+        .second-column .profile-picture {
+            width: 380px;
+            height: 380px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .about-container .second-column .profile-picture {
+        width: 370px;
+        height: 370px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+
+    .about-container {
+        width: 80vw;
+        flex-wrap: wrap;
+    }
+
+    .first-column {
+
+        h1 {
+            font-size: 20px;
+        }
+
+        h2 {
+            font-size: 32px;
+        }
+
+        p.years-old {
+            font-size: 16px;
+        }
+
+        .hobbies {
+            text-align: center;
+        }
+    }
+
+    .second-column {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2em;
+
+        .profile-picture {
+            width: 360px;
+            height: 360px;
+            align-self: center;
+        }
+    }
+}
+
+@media screen and (max-width: 880px) {
+
+    #about {
+        background-size: 10px 1350px;
+    }
+
+    .about-container {
+
+        .first-column {
+
+            h2 {
+                font-size: 30px;
+            }
+
+            .icon {
+                margin: 20px;
+            }
+
+            p.text {
+                font-size: 16px;
+                margin-right: 0;
+            }
+        }
+
+        .second-column .profile-picture {
+            width: 340px;
+            height: 340px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    #about {
+        background-size: 10px 1600px;
+    }
+
+    .about-container {
+        width: 75vw;
+
+        .first-column {
+
+            h2 {
+                font-size: 26px;
+            }
+
+            .icon {
+                margin: 0.5em;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 460px) {
+
+    .about-container {
+
+        .first-column {
+
+            h1 {
+                font-size: 18px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            p {
+
+                &.years-old {
+                    font-size: 14px;
+                }
+
+                &.text {
+                    font-size: 14px;
+                }
+            }
+
+            .icon {
+                font-size: 30px;
+                margin: 10px;
+            }
+        }
+    }
+
+    .second-column {
+
+        .profile-picture {
+            width: 280px;
+            height: 280px;
+
+            .social-media .icon {
+                font-size: 50px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 370px) {
+
+    .about-container .second-column .profile-picture {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    .about-container {
+        width: 80vw;
+        padding: 15px;
+
+        .first-column {
+
+            h2 {
+                font-size: 18px;
+            }
+        }
+
+        .second-column {
+
+            .profile-picture {
+                width: 240px;
+                height: 240px;
+            }
+
+            .social-media .icon {
+                font-size: 40px;
+            }
+        }
+    }
+
+}
