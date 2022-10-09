@@ -68,9 +68,13 @@
     .navigation-mobile {
         display: none;
 
-        a {
+        button {
             text-decoration: none;
             color: white;
+            border: 0;
+            padding: 0;
+            background-color: transparent;
+            font-size: 1em;
         }
     }
 

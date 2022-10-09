@@ -109,10 +109,9 @@
     }
 
     .dialog-container .console {
-        top: 1em;
+        top: 0em;
         left: -2em;
         width: 210px;
-        background-color: aqua;
     }
 
     .dialog-container .console .hello {
@@ -164,9 +163,9 @@
     }
 
     .dialog-container .console {
-        top: 30px;
-        width: 120px;
-        left: -25px;
+        top: 15px;
+        width: 100px;
+        left: -40px;
     }
 
     .dialog-container .console .hello {

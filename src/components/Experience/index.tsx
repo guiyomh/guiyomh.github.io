@@ -23,7 +23,7 @@ const ExpList: Exp[] = [
         "city": "Le plessis Robinsson",
         "country": "France",
         "role": "Digital Flow Technician",
-        "description": "Development of an internal online store for the management of personalized stationery. Consultant in collaborative publishing and document security in companies.",
+        "description": "I did my apprenticeship at Renault in. This experience was very enriching for me. I was in total autonomy to develop an internal <b>online store to order personalized paperwork</b> (business card, notepad, ...). I also took part in a big company project concerning <b>collaborative publishing</b> and <b>document security in companies</b>. At the end of my apprenticeship, I was taken in interim to continue the various projects in which I had taken part.",
         "technologies": [
             "PHP", "Zend Framework","HTML", "CSS", "Javascript", "jQuery", "AJAX", "SOAP", "SVN", "SQL", "MySQL", "Windows"
         ],
@@ -39,9 +39,9 @@ const ExpList: Exp[] = [
         "city": "Paris",
         "country": "France",
         "role": "Web developer",
-        "description": "Vozavi offers 33 specialized comparators to allow you to choose the right products and services at the best price.",
+        "description": "Vozavi was my first startup experience. The objective of Vozavi was <b>to browse the web and identify opinions of Internet users or professionals</b> on 33 themes in order to allow the consumer to choose the right products and services at the best price. Unlike other services, Vozavi used the technology <b>to qualify the tone of the reviews</b>.",
         "technologies": [
-            "PHP", "Java", "HTML", "CSS", "Javascript", "jQuery", "SSH", "SSL", "Linux"
+            "PHP", "Java", "HTML", "CSS", "Javascript", "jQuery", "SSH", "SSL", "Linux", "Photoshop"
         ],
         "backgroundUrl": "/img/experience/concorde.png"
     },
@@ -56,11 +56,11 @@ const ExpList: Exp[] = [
         "city": "Nanterre",
         "country": "France",
         "role": "Service Center Manager",
-        "description": "blabla.",
+        "description": "I joined Modis as a design and development engineer in their service center where I was able to participate in the implementation of projects for the Orange group and France Telecom. Then, I took more responsibilities to become project manager and service center manager.",
         "technologies": [
-            "Magento 1.X", "PHP", "Zend Framework", "PERL", "JAVA", "C", "HTML", "CSS",
+            "Magento 1.X", "PHP", "Zend Framework", "Symfony", "PERL", "Java", "C", "HTML", "CSS",
             "CSS3", "Javascript", "jQuery", "SOAP", "SVN", "Payment Services", "SSH", "SSL", "Linux",
-            "Oracle", "MySQl", "REST", "Flash"
+            "Oracle", "MySQl", "REST", "Flash", "vagrant"
         ],
         "backgroundUrl": "/img/experience/defense.png"
     },
@@ -75,11 +75,11 @@ const ExpList: Exp[] = [
         "city": "Neuilly-sur-Seine",
         "country": "France",
         "role": "Consultant / Software Architect",
-        "description": "blabla.",
+        "description": "I participated in founding Infogene, an ESN specialized in the pharmaceutical industry. I set up their service center and assisted several clients in the implementation of their digital projects.",
         "technologies": [
-            "Magento 1.X", "PHP", "Zend Framework", "PERL", "JAVA", "C", "HTML", "CSS",
-            "CSS3", "Javascript", "jQuery", "SOAP", "SVN", "Payment Services", "SSH", "SSL", "Linux",
-            "Oracle", "MySQl", "REST", "Flash"
+            "Magento 2.X", "PHP", "Symfony", "Java", "C#", "HTML", "Golang",
+            "CSS3", "Javascript", "React", "SOAP", "Git", "Payment Services", "SSH", "SSL", "Linux",
+            "Oracle", "MySQl", "REST", "Docker"
         ],
         "backgroundUrl": "/img/experience/paris.png"
     },
@@ -95,9 +95,9 @@ const ExpList: Exp[] = [
         "role": "Quality Engineer",
         "description": "I'm in charge of improving the developer ecosystem. The goal is to reduce the friction and time wasted due to an ecosystem whose bricks may not fit together well to improve the developer experience. I contribute to the implementation of tools for the development environment. I contribute to the maintenance of the CI and CD pipelines. I develop training on best practices and tool usage. I assist developers in the start-up of their projects or during the implementation of features. I develop utilities to automate processes (changelog generation, openapi). I do technology watch and I evaluate some discoveries to assess their impact on the production chain.",
         "technologies": [
-            "Magento 1.X", "PHP", "Zend Framework", "PERL", "JAVA", "C", "HTML", "CSS",
-            "CSS3", "Javascript", "jQuery", "SOAP", "SVN", "Payment Services", "SSH", "SSL", "Linux",
-            "Oracle", "MySQl", "REST", "Flash"
+            "PHP", "Symfony", "Java", "Kotlin", "HTML", "CSS", "Golang", "Rust",
+            "CSS3", "Javascript", "typescript", "Git", "Linux",
+            "PostgrSQL", "MySQl", "REST", "GraphQL", "GRPC"
         ],
         "backgroundUrl": "/img/experience/triomphe.png"
     }
@@ -212,13 +212,30 @@ export default function Experience(): JSX.Element {
                         </div>
                         <div className={clsx(styles.navigation)}>
                             <button className={clsx(styles.previous, prevActive? '': styles.disabled)} ref={previousRef}  onClick={previous}>
-                                <span>Previous</span>
                                 <FaChevronLeft title='previous' className={clsx(styles.icon)} />
+                                <span>Previous</span>
                             </button>
                             <div className={clsx(styles.devider)}>|</div>
                             <button className={clsx(styles.next, nextActive? '' : styles.disabled)} ref={nextRef} onClick={next}>
                                 <span>Next</span>
                                 <FaChevronRight title='next' className={clsx(styles.icon) } />
+                            </button>
+                        </div>
+
+                        {/* Custom mobile menu active under 600px wide resolution */}
+                        <div className={clsx(styles["navigation-mobile"])}>
+                            <button className={clsx(styles.previous, prevActive ? '' : styles.disabled)} ref={previousRef} onClick={previous}>
+                                <div className={styles.molding}>
+                                    <FaChevronLeft title='previous' className={clsx(styles.icon)} />
+                                    <span>Previous</span>
+                                </div>
+                            </button>
+                            <div className={clsx(styles.devider)}>|</div>
+                            <button className={clsx(styles.next, nextActive ? '' : styles.disabled)} ref={nextRef} onClick={next}>
+                                <div className={styles.molding}>
+                                    <span>Next</span>
+                                    <FaChevronRight title='next' className={clsx(styles.icon)} />
+                                </div>
                             </button>
                         </div>
                     </div>
